@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Store Online</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="./member.js"></script>
+    <link rel="stylesheet" href="./member.css" />
+    <style></style>
+  </head>
+  <body>
+    <div class="overlay" id="loading">
+      <div class="loader" ></div>
+
+    </div>
+    <div class="container">
+      <div class="header">
+        <div class="logo">STORE ONLINE</div>
+
+        <div class="action-menu">
+          <div class="menu-item">List</div>
+          <div class="menu-item" onclick="showModalPost()">Add</div>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="content">
+          <div class="title">My Member List</div>
+          <div class="action">
+            <input
+              type="text"
+              class="global-search"
+              id="global-search"
+              placeholder="enter text ..."
+              onkeyup="filter()"
+            />
+          </div>
+          <div class="memberlist" id="memberlist"></div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="modal">
+      <div class="form"> 
+        <div class="title">ADD Member</div>
+        <input
+          type="text"
+          class="input-text global-search"
+          placeholder="enter name ..."
+          id="input-name"
+        />
+        <input
+          type="text"
+          class="input-text global-search"
+          placeholder="enter description ..."
+          id="input-des"
+        />
+        <input
+          type="file"
+          class="image-input input-text global-search"
+          placeholder="enter description ..."
+          id="inputADD"
+          accept="image/jpeg, image/png, image/jpg"
+        />
+        <div class="display-img global-search" id="display-img"></div>
+        <div class="action-form">
+          <button class="btn primary" onclick="createmember()">Ok</button>
+          <button class="btn secondary" onclick="hideModalPost()">Cancel</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
